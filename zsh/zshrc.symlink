@@ -32,7 +32,15 @@ done
 autoload -U compinit
 compinit
 
-# load every completion after autocomplete loads
+# from Jeffrey S - include bashcompinit for bash completion.sh files (e.g. terraform)
+autoload -U +X bashcompinit && bashcompinit
+# load every bash completion file
+for file in ${(M)config_files:#*/completion.sh}
+do
+  source $file
+done
+
+# load every zsh completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
   source $file

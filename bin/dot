@@ -47,11 +47,11 @@ $ZSH/macos/set-defaults.sh
 $ZSH/macos/set-hostname.sh
 
 # Install homebrew
-$ZSH/homebrew/install.sh 2>&1
+#$ZSH/homebrew/install.sh 2>&1
 
 # Upgrade homebrew
-echo "› brew update"
-brew update
+#echo "› brew update"
+#brew update
 
 # Install software
 echo "› script/install"
